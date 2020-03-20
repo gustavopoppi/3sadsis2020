@@ -10,7 +10,7 @@ public class GerenciadorDeComissao {
 			double percentualDeComissao) {
 		double comissao = valorDaVenda * (percentualDeComissao / 100.00);
 		if (comissao < valorMinimo) {
-			return comissao;
+			return valorMinimo;
 		}
 		return comissao;
 	}
@@ -28,4 +28,3 @@ public class GerenciadorDeComissao {
 		return comissao;
 	}
 }
-
