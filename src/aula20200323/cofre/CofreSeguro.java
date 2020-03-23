@@ -16,16 +16,15 @@ public class CofreSeguro {
 		this.aberto = false;
 	}
 
-	public void Abrir(int senha) {
+	public void abrir(int senha) {
 		if (this.senha == senha) {
 			aberto = true;
 		} else {
 			System.out.println("Senha incorreta");
-			aberto = false;
 		}
 	}
 
-	public void Fechar() {
+	public void fechar() {
 		aberto = false;
 	}
 

@@ -49,11 +49,11 @@ class TestesComCofre {
 	@Test
 	void verificarCofreComSenhaCertaESenhaErrada() {
 		CofreSeguro cofreSenhaCerta = new CofreSeguro(123);		
-		cofreSenhaCerta.Abrir(123);		
+		cofreSenhaCerta.abrir(123);		
 		assertEquals(true, cofreSenhaCerta.isAberto());		
 		
 		CofreSeguro cofreSenhaErrada = new CofreSeguro(123);		
-		cofreSenhaCerta.Abrir(321);		
+		cofreSenhaCerta.abrir(321);		
 		assertEquals(false, cofreSenhaErrada.isAberto());
 	}
 
