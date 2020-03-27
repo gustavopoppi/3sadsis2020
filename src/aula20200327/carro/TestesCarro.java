@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class TestesCarro {
 
 	@Test
-	void desligarCarroAutomaticamenteCasoEstejaSemCombustivel() {
+	void ligarCarroEAcelerarCasoTenhaCombustivel() {
 		Carro carro = new Carro();
 		
 		carro.abastecer(2); // 2 Litros de gasolina
@@ -32,7 +32,7 @@ class TestesCarro {
 	}
 	
 	@Test
-	void desligarCarroCasoNaoTenhaCombustivelQuandoAcelerar() {
+	void desligarCarroCasoNaoTenhaCombustivel() {
 		Carro carro = new Carro();
 		
 		carro.abastecer(5);
