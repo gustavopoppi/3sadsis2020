@@ -35,9 +35,9 @@ class TestesCarro {
 	void desligarCarroCasoNaoTenhaCombustivel() {
 		Carro carro = new Carro();
 		
-		carro.abastecer(5);
+		carro.abastecer(2.2);
 		carro.ligar();
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i <= 7; i++) { // sobra de 0.2 litros no tanque
 			carro.acelerar();
 		}
 		
