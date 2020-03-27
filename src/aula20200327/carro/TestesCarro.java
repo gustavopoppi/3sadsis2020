@@ -16,7 +16,7 @@ class TestesCarro {
 		carro.acelerar();
 		
 		assertEquals(true, carro.isLigado());
-		assertEquals(true, carro.isDesligado());
+		assertEquals(false, carro.isDesligado());
 		assertEquals(1.5, carro.combustivelNoTanqueEmLitros);
 	}
 
@@ -28,21 +28,21 @@ class TestesCarro {
 		carro.ligar();
 		
 		assertEquals(false, carro.isLigado());
-		assertEquals(false, carro.isDesligado());
+		assertEquals(true, carro.isDesligado());
 	}
 	
 	@Test
 	void desligarCarroCasoNaoTenhaCombustivel() {
 		Carro carro = new Carro();
 		
-		carro.abastecer(2.2);
+		carro.abastecer(2);
 		carro.ligar();
-		for (int i = 0; i <= 7; i++) { // sobra de 0.2 litros no tanque
+		for (int i = 0; i <= 20; i++) { 
 			carro.acelerar();
 		}
 		
 		assertEquals(false, carro.isLigado());
-		assertEquals(false, carro.isDesligado());
+		assertEquals(true, carro.isDesligado());
 	}
 	
 	
