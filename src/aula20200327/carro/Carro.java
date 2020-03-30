@@ -2,22 +2,23 @@ package aula20200327.carro;
 
 public class Carro {
 
-	public double combustivelNoTanqueEmLitros;
+	private double combustivelNoTanqueEmLitros;
 	private boolean ligado;
+	private final static double CONSUMO = 0.250;
 
-	public Carro() {
-		combustivelNoTanqueEmLitros = 0;
+	public Carro(double combustivelNoTanqueEmLitros) {
+		this.combustivelNoTanqueEmLitros = combustivelNoTanqueEmLitros;
 		ligado = false;
 	}
 
 	public void abastecer(double volumeEmLitros) {
-		combustivelNoTanqueEmLitros = volumeEmLitros;
+		combustivelNoTanqueEmLitros += volumeEmLitros;
 	}
 
 	public void ligar() {
-		if (combustivelNoTanqueEmLitros >= 0.250) {
+		if (combustivelNoTanqueEmLitros - CONSUMO >= 0.00) {
 			ligado = true;
-			combustivelNoTanqueEmLitros -= 0.250;
+			combustivelNoTanqueEmLitros -= CONSUMO;
 		}
 	}
 
@@ -26,14 +27,11 @@ public class Carro {
 	}
 
 	public void acelerar() {
-		// carro estiver ligado e combustível m que 250ml
-		if (ligado == true && combustivelNoTanqueEmLitros >= 0.250) {
+		if (combustivelNoTanqueEmLitros - CONSUMO >= 0.00) {
 			combustivelNoTanqueEmLitros -= 0.250;
-		}
-		if (combustivelNoTanqueEmLitros > 0) 
-			ligado = true;	
+		}	
 		else
-			ligado = false;
+			desligar();
 	}
 
 	public boolean isLigado() {
@@ -41,6 +39,10 @@ public class Carro {
 	}
 
 	public boolean isDesligado() {
-		return !ligado;
+		return !isLigado();
+	}
+	
+	public double getCombustivelEmLitros() {
+		return this.combustivelNoTanqueEmLitros;
 	}
 }
