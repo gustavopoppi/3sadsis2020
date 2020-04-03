@@ -28,7 +28,7 @@ public class Carro {
 
 	public void acelerar() {
 		if (combustivelNoTanqueEmLitros - CONSUMO >= 0.00) {
-			combustivelNoTanqueEmLitros -= 0.250;
+			combustivelNoTanqueEmLitros -= CONSUMO;
 		}	
 		else
 			desligar();
@@ -44,5 +44,9 @@ public class Carro {
 	
 	public double getCombustivelEmLitros() {
 		return this.combustivelNoTanqueEmLitros;
+	}
+	
+	public void setEsvaziarCombustivelNoTanque() {
+		combustivelNoTanqueEmLitros = 0;
 	}
 }

@@ -85,5 +85,14 @@ class TestesCarro {
 		assertEquals(false, palioABC3333.isLigado());
 		assertEquals(true, palioABC3333.isDesligado());
 	}
+	
+	@Test
+	void esvaziarTanqueDeCombustivel() {
+		Carro palioABC3333 = new Carro(50);
+		
+		palioABC3333.setEsvaziarCombustivelNoTanque();
+		
+		assertEquals(0, palioABC3333.getCombustivelEmLitros());
+	}
 
 }
