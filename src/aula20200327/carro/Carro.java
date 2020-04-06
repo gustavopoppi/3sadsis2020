@@ -47,6 +47,6 @@ public class Carro {
 	}
 	
 	public void setEsvaziarCombustivelNoTanque() {
-		combustivelNoTanqueEmLitros = 0;
+		combustivelNoTanqueEmLitros = 0.00;
 	}
 }

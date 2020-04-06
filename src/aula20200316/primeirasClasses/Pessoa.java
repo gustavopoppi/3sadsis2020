@@ -1,4 +1,4 @@
-package aula202003016.primeirasClasses;
+package aula20200316.primeirasClasses;
 
 public class Pessoa {
 	//+ nome : String
