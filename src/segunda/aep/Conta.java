@@ -1,4 +1,4 @@
-package aula20200413.exForum;
+package segunda.aep;
 
 public class Conta {
 	
@@ -6,10 +6,6 @@ public class Conta {
 	private int numero;
 	private double saldo;
 	private int senha;
-	
-	// Construtor padrão
-	public Conta() {		
-	}
 	
 	// Construtor alternativo;
 	public Conta(int agencia, int numero, int senha) {
@@ -22,7 +18,6 @@ public class Conta {
 		return agencia;
 	}
 
-	// Um dos métodos modificadores
 	public void setAgencia(int agencia) {
 		if(agencia < 0) {
 			throw new RuntimeException("Nº agência negativa");
@@ -30,7 +25,6 @@ public class Conta {
 		this.agencia = agencia;
 	}
 
-	// Um dos métodos de acesso com o retorno de um atributo
 	public int getNumero() {
 		return numero;
 	}
@@ -57,7 +51,6 @@ public class Conta {
 		this.senha = senha;
 	}
 	
-	// item 2.5 e 2.6
 	public double getRendimentoInvestimento(int senha) {
 		if (validaSenha(senha)) {
 			return this.saldo * 0.05;
