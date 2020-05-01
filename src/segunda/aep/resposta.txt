@@ -1,0 +1,8 @@
+1.Encapsulamento é o controle de acesso que tem sobre atributos ou métodos. Na programação orientada a objetos garante o ocultamento de informações, onde os acessos aos dados são feitos a partir do tipo de controle, podendo ser public, private e protected:
+    • Public -> todo domínio do sistema pode ter acesso;
+    • Protected -> só pode ser manipulado pela classe e subclasse;
+    • Private -> atributo ou método só é visível dentro da classe; 
+Uma das vantagens que temos com um encapsulamento do tipo privado é fazer que apenas a classe consiga fazer alteração nesse atributo e assim colocar a modificação dele dentro de um setter, podendo fazer validações e caso não esteja válido posso lançar uma exceção
+
+
+2. As vezes precisamos validar alguma informação ou até resgatar algum dado privado para poder executar um setter, sendo assim podemos ter um método privado dentro de uma classe e assim dentro do método modificador chamar esse nosso método privado, podendo reutilizar o código.
