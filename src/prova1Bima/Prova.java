@@ -7,7 +7,7 @@ public class Prova {
 
 	public Prova(String nomeDisciplina, double valorProva) {
 		setNomeDisciplina(nomeDisciplina);
-		setValorProva(valorProva);		
+		setValorProva(valorProva);
 	}
 
 	public String getNomeDisciplina() {

@@ -6,7 +6,7 @@ public class Funcionario {
 	private double salario;
 	private boolean contratado;
 
-	public Funcionario(String nome, String departamento, double salario, boolean estaNaEmpresa) {
+	public Funcionario(String nome, String departamento, double salario) {
 		setNome(nome);
 		setDepartamento(departamento);
 		setSalario(salario);
@@ -25,7 +25,7 @@ public class Funcionario {
 		if (porcentagemAumento <= 0 || porcentagemAumento > 100)
 			throw new RuntimeException("Valor da porcentagem para aumento de salário inválida!");
 
-		this.salario += (1 + porcentagemAumento);
+		this.salario *= (1 + (porcentagemAumento/100));
 	}
 
 	public void demitir() {
@@ -35,12 +35,16 @@ public class Funcionario {
 
 	// c) um método modificador que não receba valores mas que retorne verdadeiro ou
 	// falso.
-	public boolean setDemissao() {
+	private boolean setDemissao() {
 		if (contratado) { // caso tenha vínculo ele pode ser demitido;
 			this.contratado = false;
 			return true;
 		}
 		return false;
+	}
+
+	public boolean isContratado() {
+		return contratado;
 	}
 
 	// a) um método de obtenção que retorne um valor do estado do objeto

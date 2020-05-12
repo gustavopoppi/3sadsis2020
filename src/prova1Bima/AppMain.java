@@ -6,11 +6,19 @@ public class AppMain {
 		Cliente cliente = new Cliente(); 
 		Cliente clienteNaoInicializado;
 		Cliente clienteReferenciadoUm = cliente;
-		Cliente clienteReferenciadoDois = cliente;
+		Cliente clienteReferenciadoDois = cliente;		
 		
-		System.out.println("Cliente original: " + cliente);
-		System.out.println("Cliente referenciado um: " + clienteReferenciadoUm);
-		System.out.println("Cliente referenciado dois: " + clienteReferenciadoUm);
+		Prova prova = new Prova("TESTE", 10);
+		
+		Funcionario novoFuncionario = new Funcionario("Carlos", "Tecnologia", 1000);
+		
+		System.out.println(novoFuncionario.getSalario());
+		novoFuncionario.setAlterarDepto("Adm", true);
+		System.out.println(novoFuncionario.getSalario());
+		
+		novoFuncionario.demitir();
+		System.out.println(novoFuncionario.isContratado());
+		novoFuncionario.demitir();
 	}
 
 }
