@@ -7,8 +7,8 @@ public class App {
 	public static void main(String[] args) {
 		Produto omo = new Produto("Omo");
 		Produto coca = new Produto("Coca");
-<<<<<<< HEAD
-		Produto feijao = new Produto("Feij�o");
+
+		Produto feijao = new Produto("Feijão");
 
 		Pedido pedidoUm = new Pedido(1);
 		pedidoUm.adicionarItem(new ItemPedido(omo, 1, 1));
@@ -30,7 +30,7 @@ public class App {
 			ItemPedido e = pedido.getItensPedido().get(i);
 			System.out.println("Item " + (i + 1) + ", produto: " + e.getProduto().getNome() + ", quantidade: "
 					+ e.getQuantidade() + ", valor: R$" + e.getPreco());
-=======
+
 		Produto feijao = new Produto("Feijão");
 		
 		ItemPedido itemUm = new ItemPedido(omo, 1, 1);
@@ -47,7 +47,6 @@ public class App {
 					   ", produto: " + e.getProduto().getNome() + 
 					   ", quantidade: "+ e.getQuantidade() +
 					   ", valor: R$" + e.getPreco());
->>>>>>> 9534244ad57a75da23b60d54ba2de7d36ccd5b74
 		}
 	}
 
