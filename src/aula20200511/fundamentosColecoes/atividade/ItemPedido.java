@@ -24,4 +24,8 @@ public class ItemPedido {
 		return this.produto;
 	}
 	
+	public double getValorTotal() {
+		return this.quantidade * this.preco;
+	}
+	
 }

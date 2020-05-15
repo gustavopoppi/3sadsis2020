@@ -22,4 +22,13 @@ public class Pedido {
 	public ArrayList<ItemPedido> getItensPedido() {
 		return this.itensPedido;
 	}
+	
+	public double getValorTotal() {
+		double valorTotal = 0;
+		
+		for (ItemPedido item : itensPedido) {
+			valorTotal += item.getValorTotal();
+		}
+		return valorTotal;
+	}
 }
