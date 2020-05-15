@@ -1,7 +1,5 @@
 package aula20200511.fundamentosColecoes.atividade;
 
-import aula20200508.associacoesComArray.Endereco;
-
 public class App {
 
 	public static void main(String[] args) {
