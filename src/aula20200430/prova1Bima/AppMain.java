@@ -1,4 +1,4 @@
-package prova1Bima;
+package aula20200430.prova1Bima;
 
 public class AppMain {
 
