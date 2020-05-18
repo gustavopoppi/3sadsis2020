@@ -1,35 +1,39 @@
 package aula20200518.pedido;
 
 public class ItemPedido {
-	// - quantidade : double
+	//- quantidade : double
 	private double quantidade;
-
-	// - preco : double
+	
+	//- preco : double
 	private double preco;
-
-	// - produto (atributo de associação)
+	
+	//- produto (atributo de associação) 
 	private Produto produto;
-
-	// + getQuantidade() : double
+	
+	//+ getQuantidade() : double
 	public double getQuantidade() {
 		return quantidade;
 	}
-
-	// + getpreco() : double
+	
+	//+ getpreco() : double
 	public double getPreco() {
 		return preco;
 	}
-
-	// + getProduto() : Produto
+	
+	//+ getProduto() : Produto
 	public Produto getProduto() {
 		return produto;
 	}
-
-	// + ItemPedido(produto : Produto, quantidade : double, preco : double)
+	
+	//+ ItemPedido(produto : Produto, quantidade : double, preco : double)
 	public ItemPedido(Produto produto, double quantidade, double preco) {
 		this.produto = produto;
 		this.quantidade = quantidade;
 		this.preco = preco;
+	}
+	
+	public double getValorTotal() {
+		return this.preco * this.quantidade;
 	}
 
 	@Override
@@ -65,5 +69,4 @@ public class ItemPedido {
 			return false;
 		return true;
 	}
-
 }
