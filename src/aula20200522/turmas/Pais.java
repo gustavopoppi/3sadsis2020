@@ -7,7 +7,6 @@ public class Pais {
 	public String nome;
 	public int codigoDDI;
 	public ArrayList<Estado> estados = new ArrayList<>();
-	public int qtdeEstado = 0;
 	
 	public Pais(String nome, int codigoDDI) {
 		this.nome = nome;
@@ -24,7 +23,6 @@ public class Pais {
 	
 	public void addEstado(Estado e) {
 		this.estados.add(e);
-		this.qtdeEstado++;
 	}
 	
 	public ArrayList<Estado> getEstados(){
@@ -32,6 +30,6 @@ public class Pais {
 	}
 
 	public int contarEstado() {
-		return this.qtdeEstado;
+		return estados.size();
 	}
 }
