@@ -1,4 +1,4 @@
-package aula20200522.turmas;
+package aula20200525.localidades;
 
 import java.util.ArrayList;
 import java.util.HashSet;

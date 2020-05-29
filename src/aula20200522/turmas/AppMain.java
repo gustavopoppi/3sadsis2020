@@ -9,14 +9,15 @@ public class AppMain {
 		Pais brasil = new Pais("Brasil", 55);
 
 		brasil.addEstado(new Estado("Paraná", "PR", 44));
+		brasil.addEstado(new Estado("Teste", "PR", 44));
+		brasil.addEstado(new Estado("Teste2", "PR", 44));		
 		brasil.addEstado(new Estado("Mato Grosso", "MT", 66));
 		brasil.addEstado(new Estado("São Paulo", "SP", 11));
 
 		System.out.println("País: " + brasil.getNome());
 
-		ArrayList<Estado> listaEstados = brasil.getEstados();
 		
-		for (Estado item : listaEstados) {
+		for (Estado item : brasil.getEstados()) {
 			System.out.println("#----------------------#");
 			System.out.println(item.getNome());
 		}
