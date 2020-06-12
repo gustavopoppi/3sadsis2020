@@ -8,17 +8,17 @@ public class Pessoa {
 	//private Endereço[] endereços = new Endereço[5];
 	private ArrayList<Endereco> enderecos = new ArrayList();
 	
+	public Pessoa(String nome, int idade) {
+		this.nome = nome;
+		this.idade = idade;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
 	
 	public int getIdade() {
 		return idade;
-	}
-	
-	public Pessoa(String nome, int idade) {
-		this.nome = nome;
-		this.idade = idade;
 	}
 	
 	public void adicionarEndereço(Endereco e) {

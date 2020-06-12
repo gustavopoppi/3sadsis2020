@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class AppMain {
 
+	// ASSOCIAÇÃO 1 PARA 1..*
 	public static void main(String[] args) {
 
 		Pais brasil = new Pais("Brasil", 55);

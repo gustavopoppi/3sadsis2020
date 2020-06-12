@@ -2,6 +2,7 @@ package aula20200601.associacoes;
 
 public class AppAssociacoes {
 
+	// ASSOCIAÇÃO N PARA N
 	public static void main(String[] args) {
 		/*
 		ArrayList<String> nomes = new ArrayList<>();

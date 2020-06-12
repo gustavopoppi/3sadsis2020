@@ -27,9 +27,9 @@ public class Endereço {
 		return moradores;
 	}
 	public void addMorador(Pessoa p) {
-//		if (this.moradores.contains(p)) {
-//			return;
-//		}
+		if (this.moradores.contains(p)) {
+			return;
+		}
 		System.out.println("Adicionando novo morador ao endereço: " + p.toString());
 		this.moradores.add(p);
 		p.addEndereço(this);
