@@ -1,11 +1,11 @@
-package aula20200525.localidades;
+package aula2020704.prova2;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Pais {
 	private String nome;
 	private int códigoDDI;
-	private ArrayList<Estado> estados = new ArrayList<>();
+	private HashSet<Estado> estados = new HashSet<>();
 
 	public Pais(String nome, int codigoDDI) {
 		this.nome = nome;
@@ -17,15 +17,10 @@ public class Pais {
 	public int getCodigoDDI() {
 		return códigoDDI;
 	}
-	public void addEstado(Estado e) {
-		for (Estado estadoExistente : estados) {
-			if (estadoExistente.getSigla().equals(e.getSigla())) {
-				return;
-			}
-		}
+	public void addEstado(Estado e) {		
 		this.estados.add(e);		
 	}
-	public ArrayList<Estado> getEstados() {
+	public HashSet<Estado> getEstados() {
 		return estados;
 	}
 	public int contaEstados() {
